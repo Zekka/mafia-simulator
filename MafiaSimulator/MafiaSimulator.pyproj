@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>86bb357d-1493-4f09-9481-af1adf4d417a</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>simulator.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>MafiaSimulator</Name>
+    <RootNamespace>MafiaSimulator</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="chattyreporter.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="overcomplicated\factions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="overcomplicated\roles.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="overcomplicated\setups.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="overcomplicated\simulator.py" />
+    <Compile Include="overcomplicated\skill_levels.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="personalities.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="roles.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rules.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="simulator.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="overcomplicated\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
